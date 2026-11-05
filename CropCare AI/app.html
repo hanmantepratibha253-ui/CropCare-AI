@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CropCare AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="cropcare-logo-green.png" alt="CropCare AI logo">
+            <h1><span aria-hidden="true">🌿</span> CropCare <span class="brand-ai">AI</span></h1>
+        </div>
+        <p>Learn how to care for your crops</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#crops">Our Crops</a>
+        <a href="#check">Check a Crop Leaf</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#features">Features</a>
+        <a href="#fertilizer">Fertilizer Guidance</a>
+        <a href="#contact">Contact</a>
+        <div class="auth-actions">
+            <button class="nav-btn" type="button" data-action="login">Login</button>
+            <button class="nav-btn" type="button" data-action="register">Register</button>
+            <button class="nav-btn" type="button" data-action="logout">Log Out</button>
+        </div>
+    </nav>
+
+    <div id="login-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="login-title">
+            <button class="modal-close" type="button" data-close="login" aria-label="Close login form">×</button>
+            <h3 id="login-title">Welcome Back</h3>
+            <form id="login-form" class="register-form">
+                <div>
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" name="loginEmail" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="loginPassword" placeholder="Enter your password"
+                        required>
+                </div>
+                <button class="btn register-submit" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-modal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="register-title">
+            <button class="modal-close" type="button" data-close="register" aria-label="Close register form">×</button>
+            <h3 id="register-title">Register with CropCare AI</h3>
+            <form id="register-form" class="register-form">
+                <div>
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="fullName" placeholder="Enter your name" required>
+                </div>
+                <div>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age" required>
+                </div>
+                <div>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                </div>
+                <button class="btn register-submit" type="submit">Save Information</button>
+            </form>
+        </div>
+    </div>
+
+    <main class="container">
+        <section id="home">
+            <h2>Welcome to CropCare AI</h2>
+            <p>Discover a smarter and more sustainable way to care for your crops with CropCare AI, your digital
+                companion for modern agriculture. Our platform provides useful information about different crops, plant
+                health, common crop diseases, and effective farming practices to help farmers make better agricultural
+                decisions. From identifying potential leaf problems to understanding disease prevention, fertilizer
+                guidance, soil management, and proper crop care, CropCare AI brings important agricultural knowledge
+                together in one simple and user-friendly platform. It aims to make farming smarter, easier, and more
+                informed by combining technology with agricultural knowledge. Whether you are a farmer, student, or
+                agriculture enthusiast, CropCare AI helps you explore innovative farming solutions, improve crop
+                awareness, reduce potential crop losses, and move towards healthier crops and a more productive
+                agricultural future.</p>
+            <img class="home-image" src="cropcare-ai-main.png.jpeg"
+                alt="CropCareAI helping identify crop diseases from a leaf image">
+            <a class="btn home-button-bottom" href="#crops">Learn about crops</a>
+        </section>
+
+        <section class="stats-strip" aria-label="CropCare AI highlights">
+            <div class="stat-item">
+                <strong>500+</strong>
+                <span>Farmers guided</span>
+            </div>
+            <div class="stat-item">
+                <strong>25+</strong>
+                <span>Crops monitored</span>
+            </div>
+            <div class="stat-item">
+                <strong>98%</strong>
+                <span>Field visibility</span>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Our Project</h2>
+            <div class="about-layout">
+                <div class="about-text">
+                    <p>CropCare AI is a smart agriculture project that brings useful crop-care knowledge together in one
+                        easy-to-use platform. It helps farmers and learners explore crop growing needs, recognize common
+                        signs of plant disease, and learn about responsible fertilizer use, water management, and
+                        sustainable farming practices. By combining agricultural knowledge with technology, CropCare AI
+                        aims to support informed decisions, healthier crops, and a more productive future for farming.
+                    </p>
+                </div>
+                <div class="about-media">
+                    <video class="about-video" controls muted loop playsinline>
+                        <source src="smart-farming-intro.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <video class="about-video" controls muted loop playsinline>
+                        <source src="Crop Protection Guide.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                    <video class="about-video" controls muted loop playsinline>
+                        <source src="Advanced Farming Technology.mp4" type="video/mp4">
+                        Your browser does not support the video.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="crops">
+            <h2>Our Crops</h2>
+            <div class="variety">
+                <article class="card">
+                    <h3>Tomato</h3>
+                    <img class="crop-image" src="Tomate%20Saint%20Pierre.webp" alt="Tomatoes growing on a plant"
+                        loading="lazy" decoding="async">
+                    <p>Water the soil regularly and give the plant enough sunlight.</p>
+                    <ul>
+                        <li>Check the leaves</li>
+                        <li>Remove dry leaves</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Cotton</h3>
+                    <img class="crop-image" src="Cotton%20Plant.jpg" alt="Cotton growing on a plant" loading="lazy"
+                        decoding="async">
+                    <p>Check the plant often and keep the field free from weeds.</p>
+                    <ul>
+                        <li>Look for leaf changes</li>
+                        <li>Ask a local expert for advice</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Wheat</h3>
+                    <img class="crop-image" src="Yieid%20Wheat%20Variety.jpg"
+                        alt="Farmer inspecting a wheat crop and seeds" loading="lazy" decoding="async">
+                    <p>Healthy soil and regular field checks help wheat grow well.</p>
+                    <ul>
+                        <li>Check the crop regularly</li>
+                        <li>Keep the field clean</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Soybean</h3>
+                    <img class="crop-image" src="aagriworldview.webp"
+                        alt="soybean field and smart agriculture monitoring" loading="lazy" decoding="async">
+                    <p>Maintain proper water control and monitor crop growth to improve yield.</p>
+                    <ul>
+                        <li>Check standing water levels</li>
+                        <li>Watch for nutrient imbalance</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Smart Farming</h3>
+                    <img class="crop-image" src="AI-for-Agriculture.webp" alt="AI-based smart farming technology"
+                        loading="lazy" decoding="async">
+                    <p>Use data, sensors, and crop care tools to improve decisions and reduce loss.</p>
+                    <ul>
+                        <li>Use field monitoring tools</li>
+                        <li>Study crop health from images</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <h3>Agri Bot</h3>
+                    <img class="crop-image" src="Agri-Bot.webp" alt="Agriculture robot assisting in farming"
+                        loading="lazy" decoding="async">
+                    <p>Automation can help with field monitoring, spraying, and efficient crop care.</p>
+                    <ul>
+                        <li>Reduce manual labor</li>
+                        <li>Track plant health faster</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="check">
+            <h2>Check a Crop Leaf</h2>
+            <div class="check-intro-card">
+                <p class="check-intro">Take the first step towards healthier crops with CropCare AI's smart crop health
+                    analysis feature. Simply upload a clear picture of a crop leaf and explore information about
+                    possible plant health problems, common diseases, and visible symptoms. This feature is designed to
+                    help farmers and users understand changes in crop leaves and become more aware of potential diseases
+                    that may affect plant growth. It also provides useful information about crop care, disease
+                    prevention, proper watering, soil management, and general farming practices. By learning about early
+                    warning signs and understanding the importance of regular crop monitoring, farmers can take timely
+                    advice from agricultural experts and make better decisions to protect their crops. CropCare AI aims
+                    to make crop health information easier to understand and accessible through technology, helping
+                    farmers move towards healthier plants, better crop management, and more sustainable farming.</p>
+                <a class="btn check-learn-more" href="#check-benefits">Learn More</a>
+            </div>
+            <ul class="check-benefits" id="check-benefits">
+                <li>Identify potential leaf problems. Notice unusual spots, yellowing, curling, or wilting and keep
+                    track of when they appear.</li>
+                <li>Learn about plant health. Regularly check leaf color, stem strength, and new growth to understand
+                    how your crop is doing.</li>
+                <li>Explore crop care recommendations. Find general guidance for looking after crops and consult a local
+                    agriculture expert for advice suited to your field.</li>
+                <li>Get basic information about possible crop diseases. Learn about common warning signs, but confirm
+                    suspected diseases with a qualified expert.</li>
+                <li>Understand common leaf symptoms. Compare changes in color, shape, and texture, and note whether they
+                    affect one plant or many.</li>
+                <li>Learn preventive crop-care methods. Keep fields clean, inspect plants regularly, and use recommended
+                    practices for your crop.</li>
+                <li>Get guidance about proper watering and soil care. Check soil moisture and avoid overwatering to
+                    support healthy roots and growth.</li>
+                <li>Follow healthy farming practices. Use suitable seeds, maintain clean tools, and follow local
+                    agricultural recommendations.</li>
+                <li>Monitor crop growth and spot changes early. Check plants on a regular schedule and record changes so
+                    you can respond promptly.</li>
+                <li>Protect plants from pests and harsh weather. Inspect crops for pest activity and use suitable
+                    protective measures recommended by local experts.</li>
+            </ul>
+            <form id="crop-analysis-form">
+                <div>
+                    <label for="crop">Choose your crop</label>
+                    <select id="crop" name="crop">
+                        <option value="tomato">Tomato</option>
+                        <option value="cotton">Cotton</option>
+                        <option value="wheat">Wheat</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="leaf-photo">Choose a leaf photo (optional)</label>
+                    <input type="file" id="leaf-photo" name="leaf-photo" accept="image/*">
+                </div>
+                <div class="check-form-action">
+                    <button class="btn" type="submit">Analyze Crop</button>
+                </div>
+            </form>
+            <div id="image-preview" class="image-preview" aria-live="polite"></div>
+            <div id="analysis-result" class="analysis-result" aria-live="polite"></div>
+        </section>
+
+        <section id="benefits" class="hero">
+            <div class="hero-content">
+                <h3>Benefits of CropCare AI</h3>
+                <p class="subtitle">Smart Farming for a Better Future</p>
+                <p>CropCare AI offers numerous benefits to modern agriculture by combining technology and smart farming
+                    solutions. It helps farmers understand crop health, identify possible plant diseases, and receive
+                    useful recommendations for better crop management. With the support of Artificial Intelligence,
+                    farmers can learn about potential crop problems at an early stage and take appropriate steps to
+                    protect their plants. The platform also provides helpful information about crop care, fertilizer
+                    guidance, water management, and healthy farming practices. It aims to reduce unnecessary resource
+                    usage, save valuable time, and support better decision-making. CropCare AI encourages farmers to
+                    adopt modern agricultural techniques, improve productivity, and manage their fields more
+                    efficiently. Our goal is to make farming smarter, easier, more sustainable, and more beneficial for
+                    farmers by bringing useful agricultural information and AI-powered technology together.</p>
+                <div class="hero-button">
+                    <a href="#features" class="btn">Explore Features</a>
+                </div>
+            </div>
+
+            <div class="hero-media">
+                <div class="hero-video">
+                    <video controls muted loop playsinline>
+                        <source src="crop.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+            <div class="hero-cards">
+                <div class="hero-card-item">
+                    <button class="flip-card" type="button" aria-label="Crop Health" aria-pressed="false">
+                        <span class="flip-card-face flip-card-front">
+                            <strong>Crop Health</strong>
+                            <span>Monitor your crops, detect plant diseases, and get smart farming guidance with
+                                CropCare AI.</span>
+                        </span>
+                        <span class="flip-card-face flip-card-back">
+                            <strong>Crop Health Tips</strong>
+                            <span>Observe leaf color, spots, and unusual changes to identify possible crop health
+                                problems.</span>
+                        </span>
+                    </button>
+                    <a class="btn card-button" href="#check">Check a Crop Leaf</a>
+                </div>
+                <div class="hero-card-item">
+                    <button class="flip-card" type="button" aria-label="Disease Awareness" aria-pressed="false">
+                        <span class="flip-card-face flip-card-front">
+                            <strong>Disease Awareness</strong>
+                            <span>Learn about common crop diseases, their symptoms, and ways to protect your
+                                plants.</span>
+                        </span>
+                        <span class="flip-card-face flip-card-back">
+                            <strong>What to Check</strong>
+                            <span>Check for leaf spots, wilting, yellowing, and unusual plant growth.</span>
+                        </span>
+                    </button>
+                    <a class="btn card-button" href="#check">Check a Crop Leaf</a>
+                </div>
+                <div class="hero-card-item">
+                    <button class="flip-card" type="button" aria-label="Fertilizer Guidance" aria-pressed="false">
+                        <span class="flip-card-face flip-card-front">
+                            <strong>Fertilizer Guidance</strong>
+                            <span>Get useful information about fertilizers and nutrients to support healthy crop
+                                growth.</span>
+                        </span>
+                        <span class="flip-card-face flip-card-back">
+                            <strong>Use Carefully</strong>
+                            <span>Choose suitable fertilizers based on crop type, soil condition, and expert
+                                recommendations.</span>
+                        </span>
+                    </button>
+                    <a class="btn card-button" href="#check">Check a Crop Leaf</a>
+                </div>
+                <div class="hero-card-item">
+                    <button class="flip-card" type="button" aria-label="Smart Farming" aria-pressed="false">
+                        <span class="flip-card-face flip-card-front">
+                            <strong>Smart Farming</strong>
+                            <span>Discover smart farming techniques to improve crop health and make farming
+                                easier.</span>
+                        </span>
+                        <span class="flip-card-face flip-card-back">
+                            <strong>Plan Ahead</strong>
+                            <span>Use water wisely, monitor crop growth, and follow proper farming practices throughout
+                                the season.</span>
+                        </span>
+                    </button>
+                    <a class="btn card-button" href="#check">Check a Crop Leaf</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="fertilizer">
+            <h2>Fertilizer Guidance</h2>
+            <p>Understand the importance of proper fertilizer use for healthy crops.</p>
+            <p>Fertilizer Guidance helps farmers understand which nutrients crops need for healthy growth. CropCare AI
+                provides useful information about organic and chemical fertilizers, soil nutrients, and proper
+                fertilizer management. Using fertilizers according to soil test results and crop requirements can
+                improve plant growth, maintain soil fertility, and reduce waste. Farmers should follow recommended doses
+                and expert advice for better crop production.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-heading">
+                    <h3>CropCare AI</h3>
+                    <p class="contact-intro">Connect with us to learn more about CropCare AI and its features.</p>
+                </div>
+                <article class="contact-card">
+                    <h3>Name</h3>
+                    <p>CropCare AI</p>
+                </article>
+                <article class="contact-card">
+                    <h3>Email</h3>
+                    <p><a href="mailto:cropcareai@gmail.com">cropcareai@gmail.com</a></p>
+                </article>
+                <article class="contact-card">
+                    <h3>Address</h3>
+                    <p>Taluka Ahmedpur, District Latur</p>
+                </article>
+                <article class="contact-card">
+                    <h3>Project Category</h3>
+                    <p>Smart Agriculture &amp; AI</p>
+                </article>
+                <article class="contact-card">
+                    <h3>Contact Number</h3>
+                    <p><a href="tel:9284143678">9284143678</a></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>CropCare AI</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
